@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mehrwertsteuer-Rechner</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="">
+                <h2>Dateneingabe</h2>
+                <div>
+                    <p>Was soll berechnet werden?</p>
+                    <input type="radio" name="changeWay" id="nettoBrutto" value="1" onchange="getTxt()">
+                    <label for="nettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label><br />
+                    <input type="radio" name="changeWay" id="bruttoNetto" value="2" onchange="getTxt()">
+                    <label for="bruttoNetto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+                    <p id="notChosen"></p>
+                </div>
+                <div>
+                    <p>Mehrwertsteuersatz</p>
+                    <input type="radio" name="taxValue" id="full" value="19">
+                    <label for="full">19%</label>
+                    <input type="radio" name="taxValue" id="reduced" value="7">
+                    <label for="reduced">7%</label>
+                    <p id="noChoiceMade"></p>
+                </div>
+                <div id="betrag">
+                    <label for="amount" id="amountTxt">Betrag</label>
+                    <input type="number" name="amount" id="amount">
+                    <p id="noEntry"></p>
+                </div>
+                <button type="button" onclick="calculate()">BERECHNEN</button>
+                <input type="reset" name="reset" id="reset">
+            </form>
+        </section>
+        <section>
+            <h2>Ergebnis</h2>
+            <div>
+                <p>Mehrwertsteuerbetrag</p>
+                <p id="mwstResult"></p>
+            </div>
+            <div>
+                <p id="brutNetTxt">Betrag</p>
+                <p id="finalResult"></p>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
