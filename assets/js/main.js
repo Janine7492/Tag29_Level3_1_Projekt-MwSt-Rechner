@@ -21,6 +21,7 @@ function getTxt() {
 
 function calculate(event) {
     // Zurücksetzen Fehlermeldung
+    event.preventDefault();
     document.getElementById("notChosen").innerHTML = "";
     document.getElementById("noChoiceMade").innerHTML = "";
     document.getElementById("noEntry").innerHTML = "";
